@@ -1,0 +1,45 @@
+<!DOCTYPE html lang="ja">
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>kixiv</title>
+
+   <script src="/js/jquery.js"></script>
+   <script src="/js/main.js"></script>
+ </head>
+
+ <body>
+
+   <form method="post" id="ex_form" action="/" enctype="multipart/form-data">
+     <textarea name="ex_text" id="ex-rext"></textarea>
+     <input type="file" name="file" value="file">
+     <input type="submit" name="submit" value="さぶみっと"><br>
+   </form>
+
+   <div class="showbox">
+
+
+   <link rel="stylesheet" href="/css/style.css" type="text/css" media="all"/>
+   <br>
+　 </div>
+
+
+  <% @posts.each do |post| %>
+  <div class="uk">
+    <h2><%= post["text"] %></h2>
+    <img src="/uploads/<%= post['img_file_name'] %>" />
+    <div class="tools">
+      <span class="add-star star" data-post-id="<%= post["id"] %>"id="<%= post["id"] %>">
+        <%= post["star_count"] %>
+      </span>
+      <br>
+    </div>
+  </div>
+
+  <% end %>
+
+  <%= Time.now %>
+
+ </body>
+
+ </html>
