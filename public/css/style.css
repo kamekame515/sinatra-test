@@ -2,12 +2,12 @@
 
 
 .uk{
-  width: 500px;
-  height: 500px;
+  width: 1000px;
+  height: 1000px;
   text-align: center;
   float: left;
   background-color: #fff;
-  margin: 20px 10px 0;
+  margin: 50px 50px 50px;
   box-shadow: 0 2px 0 #eee;
 }
 
